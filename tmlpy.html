@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="../tml/style90.css">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=0">
+    </head>
+    <body>
+        <div class="main">
+
+
+        <div>
+            <form action="{{url_for('predict')}}" method="post">
+                <font size="7">
+                <h2 style="color:Black"><center>RainFall prediction</center></h2>
+            </font>
+                <h3 style="color:Black">Subdivision</h3>
+                <input type="text" id="first" name="division">
+                <h3 style="color:Black">Month1</h3><br><input id="second" name="m1">
+                <h3 style="color:Black">Month2</h3><br><input id="third" name="m2">
+                <h3 style="color:Black">Month3</h3><br><input name="m3" id="fourth">
+                <button id="sub" type="submit">Calculate Rainfall</button>
+            </form>
+
+            <br><br><h3 style="color:Black">{{ prediction_text }}</h3>
+        </div>
+    </div>
+
+    </body>
+</html>
